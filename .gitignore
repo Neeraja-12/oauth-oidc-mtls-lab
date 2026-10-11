@@ -1,0 +1,16 @@
+﻿__pycache__/
+*.pyc
+.env
+venv/
+certs/*.pem
+certs/*.key
+certs/*.crt
+certs/*.csr
+certs/*.srl
+certs/*.p12
+certs/*.jks
+!.gitkeep
+.DS_Store
+.vscode/
+.idea/
+*.log
