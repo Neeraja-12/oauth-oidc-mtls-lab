@@ -13,3 +13,16 @@
       - "8090:8080"
     volumes:
       - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
+
+  nginx-mtls:
+    image: nginx:1.27-alpine
+    container_name: nginx-mtls
+    depends_on:
+      - keycloak
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "5443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./certs:/etc/nginx/certs:ro
