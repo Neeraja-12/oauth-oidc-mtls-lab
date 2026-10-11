@@ -1,4 +1,4 @@
-﻿"""
+"""
 Flask API that validates OAuth 2.0 / OIDC access tokens from Keycloak.
 """
 
@@ -10,7 +10,7 @@ import os
 
 app = Flask(__name__)
 
-KEYCLOAK_BASE = os.environ.get("KEYCLOAK_BASE", "http://localhost:8080")
+KEYCLOAK_BASE = os.environ.get("KEYCLOAK_BASE", "http://localhost:8090")
 REALM = os.environ.get("REALM", "mtls-lab")
 ISSUER = f"{KEYCLOAK_BASE}/realms/{REALM}"
 JWKS_URL = f"{ISSUER}/protocol/openid-connect/certs"

@@ -1,4 +1,4 @@
-﻿# OAuth 2.0 / OIDC + mTLS Lab
+# OAuth 2.0 / OIDC + mTLS Lab
 
 Hands-on lab demonstrating OAuth 2.0 / OIDC flows with Keycloak and mutual
 TLS (mTLS) between a CLI client and a Flask API.
@@ -37,7 +37,7 @@ TLS (mTLS) between a CLI client and a Flask API.
     docker compose up -d
 
 Wait ~30 seconds. Verify:
-    http://localhost:8080/admin
+    http://localhost:8090/admin
     admin / admin
 
 ### 2. Start the API

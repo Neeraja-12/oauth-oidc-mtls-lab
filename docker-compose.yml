@@ -1,6 +1,4 @@
-﻿version: "3.9"
-
-services:
+﻿services:
   keycloak:
     image: quay.io/keycloak/keycloak:24.0
     container_name: keycloak
@@ -12,6 +10,6 @@ services:
       KC_HOSTNAME_STRICT: "false"
       KC_HOSTNAME_STRICT_HTTPS: "false"
     ports:
-      - "8080:8080"
+      - "8090:8080"
     volumes:
       - ./keycloak/realm-export.json:/opt/keycloak/data/import/realm-export.json:ro

@@ -1,4 +1,4 @@
-﻿"""
+"""
 CLI client that:
 1. Gets an access token from Keycloak using password grant.
 2. Calls the API with the token.
@@ -9,7 +9,7 @@ import sys
 
 import requests
 
-KEYCLOAK = "http://localhost:8080"
+KEYCLOAK = "http://localhost:8090"
 REALM = "mtls-lab"
 TOKEN_URL = f"{KEYCLOAK}/realms/{REALM}/protocol/openid-connect/token"
 API = "http://localhost:5001"

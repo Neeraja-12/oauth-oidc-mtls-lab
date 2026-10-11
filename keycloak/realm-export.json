@@ -12,12 +12,12 @@
       "publicClient": true,
       "standardFlowEnabled": true,
       "directAccessGrantsEnabled": true,
-      "redirectUris": ["http://localhost:8080/*"],
+      "redirectUris": ["http://localhost:8090/*"],
       "webOrigins": ["*"],
       "attributes": {
         "pkce.code.challenge.method": "S256"
       },
-      "defaultClientScopes": ["openid", "profile", "email"]
+      "defaultClientScopes": ["profile", "email" , "roles"]
     }
   ],
   "roles": {
@@ -32,6 +32,8 @@
       "enabled": true,
       "email": "alice@example.com",
       "emailVerified": true,
+      "firstName": "Alice",
+      "lastName": "Liddell",
       "credentials": [
         { "type": "password", "value": "alice123", "temporary": false }
       ],
@@ -42,10 +44,12 @@
       "enabled": true,
       "email": "admin@example.com",
       "emailVerified": true,
+      "firstName": "Admin",
+      "lastName": "User",
       "credentials": [
         { "type": "password", "value": "admin123", "temporary": false }
       ],
       "realmRoles": ["admin", "user"]
     }
   ]
-}
+}s
